@@ -20,7 +20,3 @@
 
 echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
 echo 'src-git small https://github.com/kenzok8/small' >>feeds.conf.default
-
-# Dokerd 校验码更新导致编译错误 #8423 https://github.com/coolsnowwolf/lede/issues/8423
-rm -rf ./feeds/packages/utils/runc/Makefile
-wget https://raw.githubusercontent.com/openwrt/packages/master/utils/runc/Makefile -O ./feeds/packages/utils/runc/Makefile
