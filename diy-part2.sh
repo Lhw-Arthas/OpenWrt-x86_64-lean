@@ -15,5 +15,4 @@
 
 
 # Dokerd 校验码更新导致编译错误 #8423 https://github.com/coolsnowwolf/lede/issues/8423
-rm -rf ./feeds/packages/utils/runc/Makefile
-svn export https://github.com/openwrt/packages/trunk/utils/runc/Makefile ./feeds/packages/utils/runc/Makefile
+sed -i 's/^\s*$[(]call\sEnsureVendoredVersion/#&/' feeds/packages/utils/dockerd/Makefile
